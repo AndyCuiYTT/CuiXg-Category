@@ -13,9 +13,28 @@
 		4B66CC69255913F1004B367B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B66CC67255913F1004B367B /* Main.storyboard */; };
 		4B66CC6B255913F2004B367B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B66CC6A255913F2004B367B /* Assets.xcassets */; };
 		4B66CC6E255913F2004B367B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B66CC6C255913F2004B367B /* LaunchScreen.storyboard */; };
+		4B67BAE82575E09000E1A8FD /* UILabel+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAD72575E09000E1A8FD /* UILabel+XFS.swift */; };
+		4B67BAE92575E09000E1A8FD /* UIImageView+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAD82575E09000E1A8FD /* UIImageView+XFS.swift */; };
+		4B67BAEA2575E09000E1A8FD /* UICollectionView+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAD92575E09000E1A8FD /* UICollectionView+XFS.swift */; };
+		4B67BAEB2575E09000E1A8FD /* YZ_AttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BADA2575E09000E1A8FD /* YZ_AttributedString.swift */; };
+		4B67BAEC2575E09000E1A8FD /* UIImage+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BADB2575E09000E1A8FD /* UIImage+XFS.swift */; };
+		4B67BAED2575E09000E1A8FD /* XFSLayoutAdaptionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BADC2575E09000E1A8FD /* XFSLayoutAdaptionDelegate.swift */; };
+		4B67BAEE2575E09000E1A8FD /* UITextField+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BADD2575E09000E1A8FD /* UITextField+XFS.swift */; };
+		4B67BAEF2575E09000E1A8FD /* YZ_TextFieldSteper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BADE2575E09000E1A8FD /* YZ_TextFieldSteper.swift */; };
+		4B67BAF02575E09000E1A8FD /* Date+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BADF2575E09000E1A8FD /* Date+XFS.swift */; };
+		4B67BAF12575E09000E1A8FD /* UITableView+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAE02575E09000E1A8FD /* UITableView+XFS.swift */; };
+		4B67BAF22575E09000E1A8FD /* UIButton+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAE12575E09000E1A8FD /* UIButton+XFS.swift */; };
+		4B67BAF32575E09000E1A8FD /* String+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAE22575E09000E1A8FD /* String+XFS.swift */; };
+		4B67BAF42575E09000E1A8FD /* UIColor+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAE32575E09000E1A8FD /* UIColor+XFS.swift */; };
+		4B67BAF52575E09000E1A8FD /* UIButton + EnlargeClick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAE42575E09000E1A8FD /* UIButton + EnlargeClick.swift */; };
+		4B67BAF62575E09000E1A8FD /* Int+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAE52575E09000E1A8FD /* Int+XFS.swift */; };
+		4B67BAF72575E09000E1A8FD /* NSObject+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAE62575E09000E1A8FD /* NSObject+XFS.swift */; };
+		4B67BAF82575E09000E1A8FD /* UIView+XFS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B67BAE72575E09000E1A8FD /* UIView+XFS.swift */; };
+		7BFBA57A864099B6D2F1905D /* Pods_CuiXg_Category.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB51763CFFE8CAEA544944F9 /* Pods_CuiXg_Category.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A96451A99AEEE4EF4636D37 /* Pods-CuiXg-Category.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuiXg-Category.release.xcconfig"; path = "Target Support Files/Pods-CuiXg-Category/Pods-CuiXg-Category.release.xcconfig"; sourceTree = "<group>"; };
 		4B66CC5E255913F1004B367B /* CuiXg-Category.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CuiXg-Category.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B66CC61255913F1004B367B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B66CC63255913F1004B367B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +43,25 @@
 		4B66CC6A255913F2004B367B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B66CC6D255913F2004B367B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B66CC6F255913F2004B367B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B67BAD72575E09000E1A8FD /* UILabel+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAD82575E09000E1A8FD /* UIImageView+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAD92575E09000E1A8FD /* UICollectionView+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+XFS.swift"; sourceTree = "<group>"; };
+		4B67BADA2575E09000E1A8FD /* YZ_AttributedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZ_AttributedString.swift; sourceTree = "<group>"; };
+		4B67BADB2575E09000E1A8FD /* UIImage+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+XFS.swift"; sourceTree = "<group>"; };
+		4B67BADC2575E09000E1A8FD /* XFSLayoutAdaptionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XFSLayoutAdaptionDelegate.swift; sourceTree = "<group>"; };
+		4B67BADD2575E09000E1A8FD /* UITextField+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+XFS.swift"; sourceTree = "<group>"; };
+		4B67BADE2575E09000E1A8FD /* YZ_TextFieldSteper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YZ_TextFieldSteper.swift; sourceTree = "<group>"; };
+		4B67BADF2575E09000E1A8FD /* Date+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAE02575E09000E1A8FD /* UITableView+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAE12575E09000E1A8FD /* UIButton+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAE22575E09000E1A8FD /* String+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAE32575E09000E1A8FD /* UIColor+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAE42575E09000E1A8FD /* UIButton + EnlargeClick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton + EnlargeClick.swift"; sourceTree = "<group>"; };
+		4B67BAE52575E09000E1A8FD /* Int+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAE62575E09000E1A8FD /* NSObject+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+XFS.swift"; sourceTree = "<group>"; };
+		4B67BAE72575E09000E1A8FD /* UIView+XFS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+XFS.swift"; sourceTree = "<group>"; };
+		B785755B6C7EDEA42866925A /* Pods-CuiXg-Category.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CuiXg-Category.debug.xcconfig"; path = "Target Support Files/Pods-CuiXg-Category/Pods-CuiXg-Category.debug.xcconfig"; sourceTree = "<group>"; };
+		EB51763CFFE8CAEA544944F9 /* Pods_CuiXg_Category.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CuiXg_Category.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BFBA57A864099B6D2F1905D /* Pods_CuiXg_Category.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +81,8 @@
 			children = (
 				4B66CC60255913F1004B367B /* CuiXg-Category */,
 				4B66CC5F255913F1004B367B /* Products */,
+				9729C9937C727576B166F1C7 /* Pods */,
+				4DECB7D5D2A07DDCACA3ADB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +97,7 @@
 		4B66CC60255913F1004B367B /* CuiXg-Category */ = {
 			isa = PBXGroup;
 			children = (
+				4B67BAD62575E09000E1A8FD /* Extension */,
 				4B66CC61255913F1004B367B /* AppDelegate.swift */,
 				4B66CC63255913F1004B367B /* SceneDelegate.swift */,
 				4B66CC65255913F1004B367B /* ViewController.swift */,
@@ -67,6 +109,48 @@
 			path = "CuiXg-Category";
 			sourceTree = "<group>";
 		};
+		4B67BAD62575E09000E1A8FD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4B67BAD72575E09000E1A8FD /* UILabel+XFS.swift */,
+				4B67BAD82575E09000E1A8FD /* UIImageView+XFS.swift */,
+				4B67BAD92575E09000E1A8FD /* UICollectionView+XFS.swift */,
+				4B67BADA2575E09000E1A8FD /* YZ_AttributedString.swift */,
+				4B67BADB2575E09000E1A8FD /* UIImage+XFS.swift */,
+				4B67BADC2575E09000E1A8FD /* XFSLayoutAdaptionDelegate.swift */,
+				4B67BADD2575E09000E1A8FD /* UITextField+XFS.swift */,
+				4B67BADE2575E09000E1A8FD /* YZ_TextFieldSteper.swift */,
+				4B67BADF2575E09000E1A8FD /* Date+XFS.swift */,
+				4B67BAE02575E09000E1A8FD /* UITableView+XFS.swift */,
+				4B67BAE12575E09000E1A8FD /* UIButton+XFS.swift */,
+				4B67BAE22575E09000E1A8FD /* String+XFS.swift */,
+				4B67BAE32575E09000E1A8FD /* UIColor+XFS.swift */,
+				4B67BAE42575E09000E1A8FD /* UIButton + EnlargeClick.swift */,
+				4B67BAE52575E09000E1A8FD /* Int+XFS.swift */,
+				4B67BAE62575E09000E1A8FD /* NSObject+XFS.swift */,
+				4B67BAE72575E09000E1A8FD /* UIView+XFS.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4DECB7D5D2A07DDCACA3ADB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB51763CFFE8CAEA544944F9 /* Pods_CuiXg_Category.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9729C9937C727576B166F1C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B785755B6C7EDEA42866925A /* Pods-CuiXg-Category.debug.xcconfig */,
+				2A96451A99AEEE4EF4636D37 /* Pods-CuiXg-Category.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B66CC72255913F2004B367B /* Build configuration list for PBXNativeTarget "CuiXg-Category" */;
 			buildPhases = (
+				9ECBC2BDB02FA17C26AE5C8A /* [CP] Check Pods Manifest.lock */,
 				4B66CC5A255913F1004B367B /* Sources */,
 				4B66CC5B255913F1004B367B /* Frameworks */,
 				4B66CC5C255913F1004B367B /* Resources */,
+				8D7E5F3E7A4C73FD8E07AB5F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +218,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D7E5F3E7A4C73FD8E07AB5F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CuiXg-Category/Pods-CuiXg-Category-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CuiXg-Category/Pods-CuiXg-Category-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CuiXg-Category/Pods-CuiXg-Category-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ECBC2BDB02FA17C26AE5C8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CuiXg-Category-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B66CC5A255913F1004B367B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B67BAF12575E09000E1A8FD /* UITableView+XFS.swift in Sources */,
 				4B66CC66255913F1004B367B /* ViewController.swift in Sources */,
+				4B67BAEC2575E09000E1A8FD /* UIImage+XFS.swift in Sources */,
 				4B66CC62255913F1004B367B /* AppDelegate.swift in Sources */,
+				4B67BAF82575E09000E1A8FD /* UIView+XFS.swift in Sources */,
+				4B67BAED2575E09000E1A8FD /* XFSLayoutAdaptionDelegate.swift in Sources */,
+				4B67BAF42575E09000E1A8FD /* UIColor+XFS.swift in Sources */,
+				4B67BAF32575E09000E1A8FD /* String+XFS.swift in Sources */,
+				4B67BAF52575E09000E1A8FD /* UIButton + EnlargeClick.swift in Sources */,
+				4B67BAEB2575E09000E1A8FD /* YZ_AttributedString.swift in Sources */,
+				4B67BAE82575E09000E1A8FD /* UILabel+XFS.swift in Sources */,
 				4B66CC64255913F1004B367B /* SceneDelegate.swift in Sources */,
+				4B67BAF62575E09000E1A8FD /* Int+XFS.swift in Sources */,
+				4B67BAF02575E09000E1A8FD /* Date+XFS.swift in Sources */,
+				4B67BAEF2575E09000E1A8FD /* YZ_TextFieldSteper.swift in Sources */,
+				4B67BAF72575E09000E1A8FD /* NSObject+XFS.swift in Sources */,
+				4B67BAEA2575E09000E1A8FD /* UICollectionView+XFS.swift in Sources */,
+				4B67BAE92575E09000E1A8FD /* UIImageView+XFS.swift in Sources */,
+				4B67BAEE2575E09000E1A8FD /* UITextField+XFS.swift in Sources */,
+				4B67BAF22575E09000E1A8FD /* UIButton+XFS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +428,7 @@
 		};
 		4B66CC73255913F2004B367B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B785755B6C7EDEA42866925A /* Pods-CuiXg-Category.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +447,7 @@
 		};
 		4B66CC74255913F2004B367B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A96451A99AEEE4EF4636D37 /* Pods-CuiXg-Category.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
