@@ -11,7 +11,7 @@ import UIKit
 extension NSObject {
 
     /// 获取当前对象对应文件名
-    func cxg_className() -> String {
+    public func cxg_className() -> String {
         let name = type(of: self).description()
         if let temp = name.components(separatedBy: ".").last {
             return temp

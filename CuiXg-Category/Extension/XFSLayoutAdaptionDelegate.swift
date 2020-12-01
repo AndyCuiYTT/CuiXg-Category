@@ -1,16 +1,15 @@
 //
-//  CXGLayoutAdaptionDelegate.swift
 //  CuiXg-Category
 //
 //  Created by CuiXg on 2019/3/1.
 //  Copyright © 2019 CuiXg. All rights reserved.
 //
-// swiftlint:disable identifier_name
-// swiftlint:disable class_delegate_protocol
 
 import UIKit
 
-protocol CXGLayoutAdaptionDelegate {
+let kScreenScale = UIScreen.main.bounds.width
+
+public protocol CXGLayoutAdaptionDelegate {
     var cxg_cgFloat: CGFloat { get }
 }
 
@@ -24,35 +23,35 @@ extension CXGLayoutAdaptionDelegate {
 
 extension CGFloat: CXGLayoutAdaptionDelegate {
 
-    var cxg_cgFloat: CGFloat {
+    public var cxg_cgFloat: CGFloat {
         return self
     }
 }
 
 extension Int: CXGLayoutAdaptionDelegate {
 
-    var cxg_cgFloat: CGFloat {
+    public var cxg_cgFloat: CGFloat {
         return CGFloat(self)
     }
 }
 
 extension UInt: CXGLayoutAdaptionDelegate {
 
-    var cxg_cgFloat: CGFloat {
+    public var cxg_cgFloat: CGFloat {
         return CGFloat(self)
     }
 }
 
 extension Float: CXGLayoutAdaptionDelegate {
 
-    var cxg_cgFloat: CGFloat {
+    public var cxg_cgFloat: CGFloat {
         return CGFloat(self)
     }
 }
 
 extension Double: CXGLayoutAdaptionDelegate {
 
-    var cxg_cgFloat: CGFloat {
+    public var cxg_cgFloat: CGFloat {
         return CGFloat(self)
     }
 }

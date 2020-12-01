@@ -1,5 +1,4 @@
 //
-//  QWImageExtension.swift
 //  CuiXg-Category
 //
 //  Created by CuiXg on 2019/2/28.
@@ -13,36 +12,10 @@ import UIKit
 extension UIImage {
 
     /// 根据颜色生成图片
-    ///
-    /// - Parameters:
-    ///   - color: 图片颜色
-    ///   - size: 图片尺寸
-    class func cxg_init(withColor color: UIColor, size: CGSize) -> UIImage? {
-        if #available(iOS 10.0, *) {
-            let renderer = UIGraphicsImageRenderer(size: size)
-            return renderer.image { (context) in
-                let context = context.cgContext
-                context.setFillColor(color.cgColor)
-                context.fill(CGRect(origin: CGPoint(x: 0, y: 0), size: size))
-            }
-        } else {
-            let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
-            UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
-            let context = UIGraphicsGetCurrentContext()
-            context?.setFillColor(color.cgColor)
-            context?.fill(rect)
-            let image = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            return image
-        }
-    }
-
-
-    /// 根据颜色生成图片
     /// - Parameters:
     ///   - color: 图片颜色
     ///   - size: 图片大小
-    convenience init(color: UIColor, size: CGSize) {
+    convenience public init(color: UIColor, size: CGSize) {
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
             if let newImage = renderer.image(actions: { (context) in
@@ -69,11 +42,10 @@ extension UIImage {
         }
     }
 
-
     /// 通过 URL 加载图片
     ///
     /// - Parameter urlStr: 图片 URL 地址
-    class func cxg_init(withURL url: String) -> UIImage? {
+    public class func cxg_init(withURL url: String) -> UIImage? {
         if let url = URL(string: url) {
             do {
                 let imageData = try Data(contentsOf: url, options: .mappedIfSafe)
@@ -88,7 +60,7 @@ extension UIImage {
     /// - Parameters:
     ///   - view: 要截取的视图
     /// - Returns: 要截取视图对应的 UIImage 对象
-    class func cxg_init(withView view: UIView) -> UIImage? {
+    public class func cxg_init(withView view: UIView) -> UIImage? {
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
             return renderer.image { (context) in
@@ -106,7 +78,7 @@ extension UIImage {
     /// 获取圆形图片
     ///
     /// - Returns: 圆形图片
-    func cxg_circle() -> UIImage? {
+    public func cxg_circle() -> UIImage? {
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
             return renderer.image { (context) in
@@ -129,7 +101,7 @@ extension UIImage {
 
     /// 获取圆角图片
     /// - Parameter radius: 圆角半径
-    func cxg_cornerRadius(_ radius: CGFloat) -> UIImage? {
+    public func cxg_cornerRadius(_ radius: CGFloat) -> UIImage? {
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
             return renderer.image { (context) in
@@ -154,7 +126,7 @@ extension UIImage {
     ///
     /// - Parameter size: 图片大小
     /// - Returns: 修改后的图片
-    func cxg_reset(withSize size: CGSize) -> UIImage? {
+    public func cxg_reset(withSize size: CGSize) -> UIImage? {
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
             return renderer.image { (_) in
@@ -175,7 +147,7 @@ extension UIImage {
     ///   - size: 图片大小
     ///   - alpha: 图片透明度
     /// - Returns: 修改后的图片
-    func cxg_reset(withSize size: CGSize, alpha: CGFloat) -> UIImage? {
+    public func cxg_reset(withSize size: CGSize, alpha: CGFloat) -> UIImage? {
 
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
@@ -195,7 +167,7 @@ extension UIImage {
     ///
     /// - Parameter width: 所需宽度
     /// - Returns: 所需尺寸图片
-    func cxg_reset(withWidth width: CGFloat) -> UIImage? {
+    public func cxg_reset(withWidth width: CGFloat) -> UIImage? {
         let height = self.size.height * (width / self.size.width)
         return cxg_reset(withSize: CGSize(width: width, height: height))
     }
@@ -204,7 +176,7 @@ extension UIImage {
     ///
     /// - Parameter height: 所需高度
     /// - Returns: 所需尺寸图片
-    func cxg_reset(withHeight height: CGFloat) -> UIImage? {
+    public func cxg_reset(withHeight height: CGFloat) -> UIImage? {
         let width = self.size.width * (height / self.size.height)
         return cxg_reset(withSize: CGSize(width: width, height: height))
     }
@@ -213,7 +185,7 @@ extension UIImage {
     ///
     /// - Parameter scale: 所需比例
     /// - Returns: 所需尺寸图片
-    func cxg_reset(withScale scale: CGFloat) -> UIImage? {
+    public func cxg_reset(withScale scale: CGFloat) -> UIImage? {
         return cxg_reset(withSize: CGSize(width: self.size.width * scale, height: self.size.height * scale))
     }
 
@@ -223,7 +195,7 @@ extension UIImage {
     ///   - maskImage: 遮罩图片
     ///   - maskRect: 遮罩层位置,大小
     /// - Returns: 添加遮罩图片
-    func cxg_addMaskImage(_ image: UIImage, maskRect rect: CGRect) -> UIImage? {
+    public func cxg_addMaskImage(_ image: UIImage, maskRect rect: CGRect) -> UIImage? {
         if #available(iOS 10.0, *) {
             let renderer = UIGraphicsImageRenderer(size: size)
             return renderer.image { (_) in
@@ -243,7 +215,7 @@ extension UIImage {
     /// 图片转 base64
     ///
     /// - Returns: 图片 base64值
-    func cxg_toBase64() -> String? {
+    public func cxg_toBase64() -> String? {
         let imageData = self.pngData()
         return imageData?.base64EncodedString(options: .lineLength64Characters)
     }
@@ -251,7 +223,7 @@ extension UIImage {
     /// 获取灰色图片
     /// - Parameter size: 灰色区域
     /// - Returns: 带有灰色图片
-    func cxg_grayImage() -> UIImage? {
+    public func cxg_grayImage() -> UIImage? {
         guard let cgImage = self.cgImage else {
             return nil
         }
@@ -276,29 +248,14 @@ extension UIImage {
         return UIImage(cgImage: newCGImage)
     }
 
-    func cxg_changeColor(_ color: UIColor) -> UIImage? {
-        if #available(iOS 10.0, *) {
-            let renderer = UIGraphicsImageRenderer(size: size)
-            return renderer.image { (_) in
-                color.setFill()
-                self.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height), blendMode: .overlay, alpha: 1.0)
-                self.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height), blendMode: .destinationIn, alpha: 1.0)
-            }
-        } else {
-            UIGraphicsBeginImageContextWithOptions(self.size, false, 0)
-            color.setFill()
-            self.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height), blendMode: .overlay, alpha: 1.0)
-            self.draw(in: CGRect(x: 0, y: 0, width: size.width, height: size.height), blendMode: .destinationIn, alpha: 1.0)
-            let newImage = UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-            return newImage
-        }
-    }
 }
 
 // MARK: gif 加载
 extension UIImage {
 
+    /// 获取根据 Data 获取 GIF
+    /// - Parameter data: GIF 动画 Data
+    /// - Returns: GIF 图片
     public class func cxg_gif(data: Data) -> UIImage? {
         // Create source from data
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else {
@@ -309,6 +266,9 @@ extension UIImage {
         return UIImage.animatedImageWithSource(source)
     }
 
+    /// 获取根据 URL 获取 GIF
+    /// - Parameter url: GIF URL 地址
+    /// - Returns: GIF 图片
     public class func cxg_gif(url: String) -> UIImage? {
         // Validate URL
         guard let bundleURL = URL(string: url) else {
@@ -325,6 +285,9 @@ extension UIImage {
         return cxg_gif(data: imageData)
     }
 
+    /// 根据 Path 获取 GIF
+    /// - Parameter url: GIF 路径
+    /// - Returns: GIF 图片
     public class func cxg_gif(pathURL url: String) -> UIImage? {
 
         // Validate data
@@ -336,6 +299,9 @@ extension UIImage {
         return cxg_gif(data: imageData)
     }
 
+    /// 根据 Name 获取 GIF
+    /// - Parameter url: GIF 路径
+    /// - Returns: GIF 图片
     public class func cxg_gif(name: String) -> UIImage? {
         // Check for existance of gif
         guard let bundleURL = Bundle.main.url(forResource: name, withExtension: "gif") else {
@@ -549,7 +515,7 @@ extension UIImage {
 
 extension UIImage {
 
-    enum CXGGradientType {
+    public enum CXGGradientType {
         case topToBottom
         case leftToRight
         case topLeftToBottomRight
@@ -562,7 +528,7 @@ extension UIImage {
     ///   - type: 渐变方向
     ///   - locations: 每个颜色在渐变色中的位置，值介于0.0-1.0之间
     ///   - size: 图片大小
-    convenience init(colors: [UIColor], gradientType type: CXGGradientType, locations: [CGFloat], size: CGSize) {
+    convenience public init(colors: [UIColor], gradientType type: CXGGradientType, locations: [CGFloat], size: CGSize) {
         assert(colors.count == locations.count, "渐变数组与颜色位置数组 count 不一致")
         UIGraphicsBeginImageContextWithOptions(size, false, 0)
         let context = UIGraphicsGetCurrentContext()

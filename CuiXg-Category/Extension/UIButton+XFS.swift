@@ -14,7 +14,7 @@ extension UIButton {
     /// - Parameters:
     ///   - URLStr: 图片 URL 地址
     ///   - imageNamed: 占位图名称
-    func cxg_setImage(_ URLStr: String, state: UIControl.State, placeholder imageNamed: String) {
+    public func cxg_setImage(_ URLStr: String, state: UIControl.State, placeholder imageNamed: String) {
         if let url = URL(string: URLStr) {
             self.sd_setBackgroundImage(with: url, for: state, placeholderImage: UIImage(named: imageNamed))
         }else {
@@ -28,7 +28,7 @@ extension UIButton {
     ///   - titleColor: 标题颜色
     ///   - font: 标题字体
     ///   - state: 状态
-    func cxg_setAttribute(title: String, titleColor: UIColor, font: UIFont, image: UIImage? = nil, for state: UIControl.State) {
+    public func cxg_setAttribute(title: String, titleColor: UIColor, font: UIFont, image: UIImage? = nil, for state: UIControl.State) {
         self.setTitle(title, for: state)
         self.setTitleColor(titleColor, for: state)
         if let img = image {
@@ -38,7 +38,7 @@ extension UIButton {
         self.titleLabel?.font = font
     }
 
-    @IBInspectable override var cxg_cornerRadius: CGFloat {
+    @IBInspectable override public var cxg_cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }

@@ -16,7 +16,7 @@ extension UIView {
     /// - Parameters:
     ///   - ornerRadius: 圆角弧度
     ///   - corners: 设置圆角位置
-    func cxg_setRoundingCorners(_ cornerRadius: CGFloat, roundingCorners corners: UIRectCorner = .allCorners, size: CGSize = .zero) {
+    public func cxg_setRoundingCorners(_ cornerRadius: CGFloat, roundingCorners corners: UIRectCorner = .allCorners, size: CGSize = .zero) {
 
         if corners == .allCorners {
             self.layer.masksToBounds = true
@@ -37,7 +37,7 @@ extension UIView {
     ///   - offset: 偏移
     ///   - opacity: 透明度
     ///   - radius: 阴影半径
-    func cxg_shadow(color: UIColor = QWColor.shadow, offset: CGSize = CGSize(width: 3, height: 3), opacity: Float = 0.8, radius: CGFloat = 4) {
+    public func cxg_shadow(color: UIColor, offset: CGSize = CGSize(width: 3, height: 3), opacity: Float = 0.8, radius: CGFloat = 4) {
         self.layer.shadowColor = color.cgColor
         self.layer.shadowOffset = offset
         self.layer.shadowOpacity = opacity
@@ -45,7 +45,7 @@ extension UIView {
     }
 
     /// 圆角大小
-    @IBInspectable var cxg_cornerRadius: CGFloat {
+    @IBInspectable public var cxg_cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -55,7 +55,7 @@ extension UIView {
     }
 
     /// 边框宽度
-    @IBInspectable var cxg_borderWidth: CGFloat {
+    @IBInspectable public var cxg_borderWidth: CGFloat {
         get {
             return layer.borderWidth
         }
@@ -65,7 +65,7 @@ extension UIView {
     }
 
     /// 边框颜色
-    @IBInspectable var cxg_borderColor: UIColor {
+    @IBInspectable public var cxg_borderColor: UIColor {
         get {
             return UIColor(cgColor: layer.borderColor!)
         }

@@ -1,5 +1,4 @@
 //
-//  UILabel+CXG.swift
 //  CuiXg-Category
 //
 //  Created by CuiXg on 2019/2/28.

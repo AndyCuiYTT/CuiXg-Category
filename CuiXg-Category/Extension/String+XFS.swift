@@ -12,7 +12,7 @@ import CommonCrypto
 extension String {
 
     /// 生成 MD5
-    func cxg_MD5() -> String {
+    public func cxg_MD5() -> String {
         let str = self.cString(using: .utf8)
         let strLength = CUnsignedInt(self.lengthOfBytes(using: .utf8))
         let digestLen = Int(CC_MD5_DIGEST_LENGTH)
@@ -26,7 +26,7 @@ extension String {
         return (hash as String).uppercased()
     }
 
-    func cxg_date(_ dateFormat: String = "yyyy-MM-dd") -> Date? {
+    public func cxg_date(_ dateFormat: String = "yyyy-MM-dd") -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.date(from: self)
@@ -37,15 +37,15 @@ extension String {
     ///   - font: 字号
     ///   - width: 宽
     ///   - height: 高
-    func cxg_size(_ font: UIFont, maxWidth width: CGFloat = CGFloat.greatestFiniteMagnitude, maxHeight height: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
+    public func cxg_size(_ font: UIFont, maxWidth width: CGFloat = CGFloat.greatestFiniteMagnitude, maxHeight height: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
         return (self as NSString).boundingRect(with: CGSize(width: width, height: height), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [.font: font], context: nil).size
     }
 
-    func cxg_size(_ attributes: [NSAttributedString.Key : Any], maxWidth width: CGFloat = CGFloat.greatestFiniteMagnitude, maxHeight height: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
+    public func cxg_size(_ attributes: [NSAttributedString.Key : Any], maxWidth width: CGFloat = CGFloat.greatestFiniteMagnitude, maxHeight height: CGFloat = CGFloat.greatestFiniteMagnitude) -> CGSize {
         return (self as NSString).boundingRect(with: CGSize(width: width, height: height), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: attributes, context: nil).size
     }
 
-    func cxg_int() -> Int {
+    public func cxg_int() -> Int {
         return Int(self) ?? 0
     }
 }

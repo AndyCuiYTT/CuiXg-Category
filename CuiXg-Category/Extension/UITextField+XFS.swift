@@ -15,7 +15,7 @@ extension UITextField {
     ///   - placeholder: 占位字符串
     ///   - font: 字体
     ///   - color: 颜色
-    func cxg_setAttribute(_ placeholder: String, font: UIFont, textColor color: UIColor) {
+    public func cxg_setAttribute(_ placeholder: String, font: UIFont, textColor color: UIColor) {
         self.placeholder = placeholder
         self.textColor = color
         self.font = font

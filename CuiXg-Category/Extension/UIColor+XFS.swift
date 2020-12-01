@@ -19,7 +19,7 @@ extension UIColor {
     ///   - B: 色值
     ///   - alpha: 透明度
     /// - Returns: RGB 对应颜色
-    convenience init(R: CGFloat, G: CGFloat, B: CGFloat, alpha: CGFloat = 1) {
+    convenience public init(R: CGFloat, G: CGFloat, B: CGFloat, alpha: CGFloat = 1) {
         if #available(iOS 10.0, *) {
             self.init(displayP3Red: CGFloat(R / 255.0), green: G / 255.0, blue: B / 255.0, alpha: alpha)
         }else {
@@ -33,7 +33,7 @@ extension UIColor {
     ///   - hex: 16进制色值 例如:0xFFFFFF
     ///   - alpha: 透明度
     /// - Returns: 色值对应颜色
-    convenience init(hex: NSInteger, alpha: CGFloat = 1) {
+    convenience public init(hex: NSInteger, alpha: CGFloat = 1) {
         if #available(iOS 10.0, *) {
             self.init(displayP3Red: ((CGFloat)((hex & 0xFF0000) >> 16))/255.0, green: ((CGFloat)((hex & 0xFF00) >> 8))/255.0, blue: ((CGFloat)(hex & 0xFF))/255.0, alpha: alpha)
         }else {
@@ -42,7 +42,7 @@ extension UIColor {
     }
     
     // Hex String -> UIColor
-    convenience init(hexString: String) {
+    convenience public init(hexString: String) {
         let hexString = hexString.trimmingCharacters(in: .whitespacesAndNewlines)
 
         let scanner = Scanner(string: hexString)

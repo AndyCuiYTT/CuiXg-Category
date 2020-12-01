@@ -1,5 +1,4 @@
 //
-//  QWImageViewExtension.swift
 //  CuiXg-Category
 //
 //  Created by CuiXg on 2019/6/4.
@@ -11,7 +10,7 @@ import SDWebImage
 
 extension UIImageView {
 
-    var webImageManager: SDWebImageManager {
+     private var webImageManager: SDWebImageManager {
         return SDWebImageManager.shared
     }
 
@@ -20,7 +19,7 @@ extension UIImageView {
     /// - Parameters:
     ///   - URLStr: 图片 URL 地址
     ///   - imageNamed: 占位图名称
-    func cxg_setImage(_ URLStr: String?, placeholder imageNamed: String) {
+    public func cxg_setImage(_ URLStr: String?, placeholder imageNamed: String) {
         if let str = URLStr, let url = URL(string: str) {
             self.sd_setImage(with: url, placeholderImage: UIImage(named: imageNamed))
         }else {
@@ -28,7 +27,7 @@ extension UIImageView {
         }
     }
 
-    func cxg_setImage(_ URLStr: String?, placeholderImage image: UIImage?) {
+    public func cxg_setImage(_ URLStr: String?, placeholderImage image: UIImage?) {
         if let str = URLStr, let url = URL(string: str) {
             self.sd_setImage(with: url, placeholderImage: image)
         }else {
@@ -42,7 +41,7 @@ extension UIImageView {
     ///   - URLStr: 图片地址
     ///   - imageNamed: 占位图名
     ///   - completion: 下载完回调
-    func cxg_loadImage(_ URLStr: String?, placeholder imageNamed: String, completion: @escaping (UIImage?) -> Void) {
+    public func cxg_loadImage(_ URLStr: String?, placeholder imageNamed: String, completion: @escaping (UIImage?) -> Void) {
         self.image = UIImage(named: imageNamed)
         if let str = URLStr, let url = URL(string: str) {
             self.webImageManager.loadImage(with: url, options: .highPriority, progress: nil) { (image, _, _, _, _, _) in
@@ -57,7 +56,7 @@ extension UIImageView {
     ///   - URLStr: 图片地址
     ///   - imageNamed: 占位图名
     ///   - completion: 下载完回调
-    func cxg_setImage(_ URLStr: String?, placeholder imageNamed: String, completion: @escaping (UIImage?) -> Void) {
+    public func cxg_setImage(_ URLStr: String?, placeholder imageNamed: String, completion: @escaping (UIImage?) -> Void) {
         if let str = URLStr, let url = URL(string: str) {
             self.sd_setImage(with: url, placeholderImage: UIImage(named: imageNamed), options: .highPriority) { (image, _, _, _) in
                 completion(image)
@@ -67,7 +66,7 @@ extension UIImageView {
 
 
     /// 圆角大小
-    @IBInspectable override var cxg_cornerRadius: CGFloat {
+    @IBInspectable override public var cxg_cornerRadius: CGFloat {
         get {
             return layer.cornerRadius
         }
@@ -81,6 +80,8 @@ extension UIImageView {
 
 extension UIImageView {
 
+    /// 根据 GIF 名加载
+    /// - Parameter name: GIF 文件名
     public func cxg_loadGif(name: String) {
         DispatchQueue.global().async {
             let image = UIImage.cxg_gif(name: name)
@@ -90,6 +91,8 @@ extension UIImageView {
         }
     }
 
+    /// 根据 GIF URL加载
+    /// - Parameter name: GIF 文件名
     public func cxg_loadGif(url: String) {
         DispatchQueue.global().async {
             let image = UIImage.cxg_gif(url: url)
@@ -99,6 +102,8 @@ extension UIImageView {
         }
     }
 
+    /// 根据 GIF Path 路径加载
+    /// - Parameter name: GIF 文件名
     public func cxg_loadGif(pathURL url: String) {
         DispatchQueue.global().async {
             let image = UIImage.cxg_gif(pathURL: url)

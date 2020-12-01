@@ -13,7 +13,7 @@ extension Date {
     ///
     /// - Parameter dateFormat: 时间格式
     /// - Returns: 格式化后时间
-    func cxg_formatterDate(_ dateFormat: String = "yyyy-MM-dd") -> String {
+    public func cxg_formatterDate(_ dateFormat: String = "yyyy-MM-dd") -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
         return dateFormatter.string(from: self)
@@ -22,27 +22,27 @@ extension Date {
     /// 获取 Date 对应组件值
     /// - Parameter component: 组件部位
     /// - Returns: 组件值
-    func cxg_getComponent(_ component: Calendar.Component) -> Int {
+    public func cxg_getComponent(_ component: Calendar.Component) -> Int {
         let calendar = Calendar.current
         return calendar.component(component, from: self)
     }
 
     /// 获取时间年份
-    func cxg_getYear() -> Int {
+    public func cxg_getYear() -> Int {
         return cxg_getComponent(.year)
     }
 
     /// 获取月份
-    func cxg_getMonth() -> Int {
+    public func cxg_getMonth() -> Int {
         return cxg_getComponent(.month)
     }
 
     /// 获取天
-    func cxg_getDay() -> Int {
+    public func cxg_getDay() -> Int {
         return cxg_getComponent(.day)
     }
 
-    func cxg_beginDay() -> Date? {
+    public func cxg_beginDay() -> Date? {
         let calendar = Calendar.current
         let components = calendar.dateComponents([.year, .month, .day], from: self)
         return calendar.date(from: components)
